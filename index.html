@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 mx-auto">
+        <h3 class="display-4 text-center">Quản Lý Học Viện Nghiên Cứu Và Giảng Dạy</h3>
+        <form id="formQL">
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">ID : </label>
+              <input type="text" class="form-control" id="idql" />
+              <span id="spanidql" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+              <label for="">Họ và Tên : </label>
+              <input type="text" class="form-control" id="txtTen" />
+              <span id="spanTen" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">Email : </label>
+              <input type="text" class="form-control" id="txtEmail" />
+              <span id="spanEmail" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+              <label for="">Địa chỉ: </label>
+              <input type="text" class="form-control" id="txtAddres" />
+              <span id="spanDiaChi" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="">Chọn chức vụ: </label>
+              <div name="" id="cVu" class="form-control" >
+                <!-- <option>Chức vụ</option>
+                  <option>Student</option>
+                  <option>Emloyee</option>
+                  <option>Customer</option> -->
+                <input type="radio" name="chucvu" > Student
+                <input type="radio" name="chucvu" > Emloyee
+                <input type="radio" name="chucvu"> Customer
+              </div>
+
+
+              <span id="spancVu" class="text-danger"></span>
+            </div>
+          </div>
+          <!-- <div class="row">
+              <div class="col-4 form-group">
+                <label for="">Điểm toán : </label>
+                <input type="text" class="form-control" id="txtDiemToan" />
+                <span id="spanToan" class="text-danger"></span>
+              </div>
+              <div class="col-4 form-group">
+                <label for="">Điểm lý : </label>
+                <input type="text" class="form-control" id="txtDiemLy" />
+                <span id="spanLy" class="text-danger"></span>
+              </div>
+              <div class="col-4 form-group">
+                <label for="">Điểm hóa : </label>
+                <input type="text" class="form-control" id="txtDiemHoa" />
+                <span id="spanHoa" class="text-danger"></span>
+              </div>
+            </div> -->
+
+          <div class="form-group text-center">
+            <button id="btnAdd" type="button" class="btn btn-success">
+              Thêm Sinh Viên
+            </button>
+
+            <button type="button" onclick="reset()" class="btn btn-dark">
+              Reset
+            </button>
+            <button type="button" class="btn btn-info" id="btnUpdate">
+              Update
+            </button>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-9 form-group">
+            <input placeholder="Nhập tên sinh viên" type="text" class="form-control" id="txtSearch" />
+          </div>
+          <div class="col-3 form-group">
+            <button id="btnSearch" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 mx-auto">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Ho va Ten </th>
+              <th>Email</th>
+              <th>Dia Chi</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbodyQuanLy">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+  </div>
+
+  <script type="module" src="./js/person.js"></script>
+  <script type="module" src="./js/student.js"></script>
+  <script type="module" src="./js/employee.js"></script>
+  <script type="module" src="./js/customer.js"></script>
+  <script type="module" src="./js/listPerson.js"></script>
+  <script type="module" src="./js/validation.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
